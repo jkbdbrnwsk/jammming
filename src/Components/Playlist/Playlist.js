@@ -6,9 +6,9 @@ import TrackList from '../TrackList/TrackList';
 class Playlist extends React.Component {
   render() {
     return (
-      <div class='Playlist'>
+      <div className='Playlist'>
         <input defaultValue={'New Playlist'} />
-        <TrackList />
+        {/* <TrackList /> */}
         <button className='Playlist-save'>SAVE TO SPOTIFY</button>
       </div>
     );
