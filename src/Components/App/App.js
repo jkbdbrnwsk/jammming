@@ -85,6 +85,10 @@ class App extends React.Component {
     const trackURIs = this.state.playlistTracks.map(track => track.uri);
   }
 
+  search(searchTerm) {
+    console.log(searchTerm);
+  }
+
   render() {
     return (
       <div>
@@ -99,7 +103,8 @@ class App extends React.Component {
             <Playlist playlistName={this.state.playlistName}
                       playlistTracks={this.state.playlistTracks}
                       onRemove={this.removeTrack}
-                      onNameChange={this.updatePlaylistName} />
+                      onNameChange={this.updatePlaylistName}
+                      onSave={this.savePlaylist} />
           </div>
         </div>
       </div>
