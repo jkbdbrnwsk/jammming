@@ -1,5 +1,5 @@
-const clientId = process.env.SPOTIFY_CLIENT_ID;
-const redirectUri = process.env.REDIRECT_URI;
+const clientId = process.env.local.SPOTIFY_CLIENT_ID;
+const redirectUri = process.env.local.REDIRECT_URI;
 
 let accessToken;
 
