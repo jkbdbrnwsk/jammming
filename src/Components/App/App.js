@@ -5,6 +5,8 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
 
+import Spotify from '../../util/Spotify';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -87,18 +89,20 @@ class App extends React.Component {
   }
 
   search(term) {
-    console.log(term);
+    Spotify.search(term).then((searchResults) => {
+      this.setState({ searchResults: searchResults });
+    });
   }
 
   render() {
     return (
       <div>
         <h1>
-          Ja<span className='highlight'>mmm</span>ing
+          Ja<span className="highlight">mmm</span>ing
         </h1>
-        <div className='App'>
+        <div className="App">
           <SearchBar onSearch={this.search} />
-          <div className='App-playlist'>
+          <div className="App-playlist">
             <SearchResults
               searchResults={this.state.searchResults}
               onAdd={this.addTrack}
