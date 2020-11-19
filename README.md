@@ -4,8 +4,6 @@ An educational project based on the React course at the [Codecademy](http://ssqt
 
 Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Work in progress.
-
 ## Available Scripts
 
 In the project directory, you can run:
